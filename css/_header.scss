@@ -1,0 +1,177 @@
+//  header start
+header{    
+    height:50vh;
+
+   img{
+        margin-left:45%;
+   }
+
+   nav{
+       position:relative;
+       ul{
+           display:flex;
+           justify-content:space-evenly;
+           margin-top:3rem;
+           list-style: none;
+       }
+
+       li{    
+          
+          a{
+              color:$black-col;
+              font-size:larger;
+              text-decoration: none;
+              padding:1rem;
+              border-radius:5px;
+
+          }
+          a:hover{
+               background-color:$color ;
+               color:$white-col;
+               text-decoration: none;
+               
+          }
+       }
+       
+       .fa{
+           font-size:20px;
+           margin-left:20px;
+           border:1px solid grey;
+           padding:10px;
+           border-radius:10px;
+           display:none;
+       }
+      
+   }
+
+
+  //   box starts
+
+  .box {
+       background-image:url("/img/banner-bg.png");
+       color:$white-col;
+       height:100vh;
+       background-position: center top;
+       background-repeat:no-repeat;
+       
+
+       .img-box {
+              width:40%;
+              text-align:center;
+              margin-left:30%;
+              position: relative;
+              top:35%;
+             
+              
+
+              h1{
+                   font-size:9rem;
+                   font-weight:bold;
+              }
+
+              p{
+                   font-size:2rem;
+                   
+              }
+              button{
+                  @include button-property();
+                  transition-duration: 0.4s;
+              }
+              button:hover{
+                     background-color: white;
+                     color:black;
+              }
+       }
+       
+  }
+
+
+
+    
+}
+
+
+// media query starts 900px
+
+@media only screen and (max-width:$mediaquery){
+
+            
+             header{
+                  nav{
+                    
+                      ul{
+                          display:none;
+                           position:absolute;
+                           font-size:10px;
+                           margin-left:60px;
+                           top:10px;
+                           li{
+                               float:left;
+                           }
+                           
+                           
+                      }
+
+
+
+                      .fa{
+                           display:inline-block;
+                      }
+
+                  }
+
+
+
+
+
+                    //    box starts
+
+           .box {
+                margin-top:3rem;
+               
+
+               .img-box{
+                    width:40%;
+                    position: relative;
+                    top:15%;
+
+                     h1{
+                         font-size:5rem;
+                     }
+                     p{
+                          font-size:1.6rem;
+                     }
+                     button{
+                           width:90px;
+                     }
+
+               }
+          }
+                         }
+
+     }
+
+
+//   2nd media query 1217px 
+
+@media only screen and  (max-width:&mediaquery2){
+
+               
+              header{
+
+                    .box{
+                              
+
+                         
+
+
+                    }
+
+
+              }
+
+           
+
+
+
+}
